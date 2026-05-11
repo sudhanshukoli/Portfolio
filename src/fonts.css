@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "castoro-regular";
+  src: url("./assets/fonts/CastoroTitling-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "antonio-regular";
+  src: url("./assets/fonts/Antonio-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "playwrite-regular";
+  src: url("./assets/fonts/PlaywriteGBS-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "playwrite-light";
+  src: url("./assets/fonts/PlaywriteGBS-Thin.ttf") format("opentype");
+}
