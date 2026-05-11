@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="bg-gradient-to-r from-sky-200 via-sky-50 to-sky-200 App">
       <div>
-        <PortfolioHeader className="" />
+        <PortfolioHeader />
         <HomeCard />
       </div>
     </div>
