@@ -17,3 +17,13 @@
   font-family: "playwrite-light";
   src: url("./assets/fonts/PlaywriteGBS-Thin.ttf") format("opentype");
 }
+
+@font-face {
+  font-family: "gruppo-regular";
+  src: url("./assets/fonts/Gruppo-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "saira-bold";
+  src: url("./assets/fonts/Saira_Condensed-Bold.ttf") format("opentype");
+}

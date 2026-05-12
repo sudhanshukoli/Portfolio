@@ -2,8 +2,9 @@ const homeCardsData = [
   {
     id: 1,
     title: "My Resume",
-    desc: "Click here to check my latest Resume",
-    image: "https://images.unsplash.com/photo-1618477371303-b2a56f422d9e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXIlMjByZXN1bWV8ZW58MHwxfDB8fHww"
+    desc: "Check my latest Resume",
+    image: "https://images.unsplash.com/photo-1618477371303-b2a56f422d9e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXIlMjByZXN1bWV8ZW58MHwxfDB8fHww",
+    link: "/pdfs/sudhanshu.pdf"
   },
 
   {

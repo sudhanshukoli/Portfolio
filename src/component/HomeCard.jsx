@@ -64,14 +64,14 @@ export default function HomeCard(){
             <div className="flex">           
                 {homeCardsData.map((data, index)=>(
                     <div key={data.id} className="flex-[0_0_23rem] py-8 px-2 " >
-                        <motion.div initial={{ opacity: 0, scale: 1.2 }}
+                        <motion.div initial={{ opacity: 0, scale: 1.2 }} onClick={() => window.open(data.link)}
                             animate={{ opacity: selectedIndex === index ? 1 : 0.7, scale: selectedIndex === index ? 1 : 0.9, }}
                             whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} onHoverStart={()=>setDescVisible(index)} onHoverEnd={() => setDescVisible(null)} 
                              className="cursor-pointer w-full bg-cover bg-center rounded-xl h-[28rem] overflow-hidden shadow-xl" style={{backgroundImage: `url(${data.image})`}}>
                                 
                                 <h2 className="p-5 m-auto text-2xl font-bold text-white font-castoroRegular bg-black/50 text-shadow-lg">{data.title}</h2>
                                 <AnimatePresence >
-                                    {descVisible === index && <motion.h2 transition={{ duration: 0.2 }} initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: -1}} exit={{opacity: 0, y: 100}} className="absolute inset-x-0 bottom-0 p-5 m-auto font-sans text-1.5xl text-white bg-black" >{data.desc}</motion.h2>}
+                                    {descVisible === index && <motion.h2 transition={{ duration: 0.2 }} initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: -1}} exit={{opacity: 0, y: 100}} className="absolute inset-x-0 bottom-0 p-5 m-auto font-gruppoRegular text-1.5xl text-white bg-black" >{data.desc}</motion.h2>}
                                 </AnimatePresence>
 
                         </motion.div>

@@ -10,6 +10,8 @@ module.exports = {
       antonioRegular: ["antonio-regular", "sans-serif"],
       playwriteRegular: ["playwrite-regular", "sans-serif"],
       playwriteLight: ["playwrite-light", "sans-serif"],
+      gruppoRegular: ["gruppo-regular", "sans-serif"],
+      sairaBold: ["saira-bold", "sans-serif"],
     },
   },
 },
