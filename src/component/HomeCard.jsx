@@ -71,7 +71,7 @@ export default function HomeCard(){
                                 
                                 <h2 className="p-5 m-auto text-2xl font-bold text-white font-castoroRegular bg-black/50 text-shadow-lg">{data.title}</h2>
                                 <AnimatePresence >
-                                    {descVisible === index && <motion.h2 transition={{ duration: 0.2 }} initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: -1}} exit={{opacity: 0, y: 100}} className="absolute inset-x-0 bottom-0 p-5 m-auto font-gruppoRegular text-1.5xl text-white bg-black" >{data.desc}</motion.h2>}
+                                    {descVisible === index && <motion.h2 transition={{ duration: 0.2 }} initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: 100}} className="absolute inset-x-0 bottom-0 p-5 m-auto font-gruppoRegular text-1.5xl text-white bg-black" >{data.desc}</motion.h2>}
                                 </AnimatePresence>
 
                         </motion.div>
@@ -81,7 +81,7 @@ export default function HomeCard(){
                 
             <div className="flex justify-between">    
                 {/* Top Navigation */}
-                <div className="flex items-center w-full px-2 mb-6">
+                <div className="flex items-center w-full px-2 mb-6 text-white">
 
                     <button onClick={scrollPrev}><FontAwesomeIcon className="text-2xl" icon={faLeftLong} /></button>
 
@@ -93,7 +93,7 @@ export default function HomeCard(){
 
                 </div>
 
-                <div className="flex gap-4 px-5 mx-2">
+                <div className="flex gap-4 px-5 mx-2 text-white">
                     {homeCardsData.map((_, index) => (
                         <button
                         key={index}
