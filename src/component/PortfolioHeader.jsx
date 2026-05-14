@@ -15,7 +15,7 @@ export default function PortfolioHeader(){
         </div>
 
         <motion.div initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}} className=" h-[5rem] mr-4 content-center">
-            <nav className="flex flex-row gap-6 text-2xl text-white font-sairaBold drop-shadow-2xl">
+            <nav className="flex flex-row gap-6 text-2xl text-white font-sairaBold">
                 <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`cursor-pointer ${isActive ? " underline decoration-solid underline-offset-8" : ""} `}>Home</NavLink>
                 <button className={({isActive})=>`${isActive? " underline decoration-solid underline-offset-8" : ""} `} onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
                 <NavLink to="/interests" className={({isActive})=>`cursor-pointer ${isActive ? " underline decoration-solid underline-offset-8" : ""} `}>Interests</NavLink>
