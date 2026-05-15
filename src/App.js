@@ -8,9 +8,11 @@ import "./fonts.css";
 
 function App() {
   return (
-    <div className="bg-gradient-to-t from-slate-800 to-slate-900 App">
+    <div className=" App">
+      <div className='fixed inset-0 -z-10 h-full w-full bg-[#000000] bg-[radial-gradient(125%_125%_at_50%_100%,_#000000_40%,_#350136_100%)] bg-[size:100%_100%]'></div>
       
       <PortfolioHeader />
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/interests' element={<Interests />} />

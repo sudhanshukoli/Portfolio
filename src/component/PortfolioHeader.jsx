@@ -3,25 +3,40 @@ import { NavLink } from "react-router";
 import cvPic from "../data/images/cvPhoto.png";
 
 export default function PortfolioHeader(){
+
+    const today = new Date();
+
+    const day = today.toLocaleString("en-US", {
+        weekday: "long",
+    });
+
+    const formattedDate = today.toLocaleDateString("en-IN");
+
     return(<>
     
-    <div className="flex h-[5rem] w-full flex-row justify-between pt-2  sticky top-0">
-        <div className="flex flex-row">
-            <motion.div initial={{opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{ opacity: 1}} className="h-[5rem] w-[5rem] bg-center bg-cover " 
+    <div className="flex h-[5rem] z-20 w-full flex-row justify-between pt-4 sticky top-0 ">
+        <div className="flex flex-row  h-[5rem] content-center bg-gray-500 border-l-0 pr-10 rounded-r-full border-white border bg-opacity-40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
+            <motion.div initial={{opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{ opacity: 1}} className="h-[5rem] w-[5rem] self-start bg-center bg-cover " 
                     style={{ backgroundImage: `url(${cvPic})`,
                             WebkitMaskImage: "radial-gradient(ellipse 100% 100% at left, black 60%, transparent 100%)" }}>
             </motion.div>
-            <motion.h1 initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}} className="content-center text-2xl font-bold text-white underline font-playwriteRegular decoration-solid underline-offset-8 ">Sudhanshu Koli</motion.h1>
+            <motion.h1 initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}} className="content-center text-2xl text-white font-playwriteRegular ">Sudhanshu Koli</motion.h1>
         </div>
 
-        <motion.div initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}} className=" h-[5rem] mr-4 content-center">
-            <nav className="flex flex-row gap-6 text-2xl text-white font-sairaBold">
-                <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`cursor-pointer ${isActive ? " underline decoration-solid underline-offset-8" : ""} `}>Home</NavLink>
-                <button className={({isActive})=>`${isActive? " underline decoration-solid underline-offset-8" : ""} `} onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
-                <NavLink to="/interests" className={({isActive})=>`cursor-pointer ${isActive ? " underline decoration-solid underline-offset-8" : ""} `}>Interests</NavLink>
-                <NavLink to="/contact" className={({isActive})=>`cursor-pointer ${isActive ? " underline decoration-solid underline-offset-8" : ""} `}>Contact</NavLink>
+        <motion.div initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}}
+                    className=" h-[5rem] content-center bg-gray-500 px-10 rounded-full border-white border bg-opacity-40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
+            <nav className="flex text-2xl text-white font-sairaBold">
+                <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? "text-black rounded-2xl border-white bg-gray-100 bg-opacity-80" : ""} `}>Home</NavLink>
+                <button className="px-6 mx-4" onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
+                <NavLink to="/interests" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? "text-black rounded-2xl border-white bg-gray-100 bg-opacity-80" : ""} `}>Interests</NavLink>
+                <NavLink to="/contact" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? "text-black rounded-2xl border-white bg-gray-100 bg-opacity-80" : ""} `}>Contact</NavLink>
             </nav>
         </motion.div>
+
+        <div className="flex flex-row items-center gap-2 pr-4 font-playwriteRegular text-white  h-[5rem] content-center bg-gray-500 px-10 border-r-0 rounded-l-full border-white border bg-opacity-40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
+        <h1>{day}</h1>
+        <p>{formattedDate}</p>
+        </div>
 
     </div>
 
