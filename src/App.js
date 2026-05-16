@@ -3,6 +3,7 @@ import './App.css';
 import Contact from './component/Contact';
 import Home from './component/Home';
 import Interests from './component/Interests';
+import Learn from './component/Learn';
 import PortfolioHeader from './component/PortfolioHeader';
 import "./fonts.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/interests' element={<Interests />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/learn' element={<Learn />} />
       </Routes>
     </div>
   );
