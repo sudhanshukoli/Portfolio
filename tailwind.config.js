@@ -12,6 +12,7 @@ module.exports = {
       playwriteLight: ["playwrite-light", "sans-serif"],
       gruppoRegular: ["gruppo-regular", "sans-serif"],
       sairaBold: ["saira-bold", "sans-serif"],
+      railway: ["railway", "sans-serif"],
     },
   },
 },

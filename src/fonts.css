@@ -27,3 +27,8 @@
   font-family: "saira-bold";
   src: url("./assets/fonts/Saira_Condensed-Bold.ttf") format("opentype");
 }
+
+@font-face {
+  font-family: "railway";
+  src: url("./assets/fonts/Raleway-VariableFont_wght.ttf") format("opentype");
+}

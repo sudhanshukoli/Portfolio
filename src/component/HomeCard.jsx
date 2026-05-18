@@ -1,5 +1,5 @@
 import { faCircle as faCircleRegular } from "@fortawesome/free-regular-svg-icons";
-import { faCircle as faCircleSolid, faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faCircle as faCircleSolid } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
@@ -50,26 +50,26 @@ export default function HomeCard(){
 
 
 
-    const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
+    // const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
 
-    const scrollNext = () => emblaApi && emblaApi.scrollNext();
+    // const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
     const scrollTo = (index) => emblaApi && emblaApi.scrollTo(index);
 
     return(<>
-    <div className="flex items-center justify-center w-screen h-screen overflow-hidden shadow-xl">
+    <div className="overflow-hidden shadow-xl ">
 
-        <div className="overflow-hidden w-[50rem]" ref={emblaRef}>
+        <div className="overflow-hidden w-[40rem] h-[45rem]" ref={emblaRef}>
 
             <div className="flex">           
                 {homeCardsData.map((data, index)=>(
-                    <div key={data.id} className="flex-[0_0_23rem] py-8 px-2 " >
-                        <motion.div initial={{ opacity: 0, scale: 1.2 }} onClick={() => window.open(data.link)}
+                    <div key={data.id} className="flex-[0_0_30rem] py-8 px-2 " >
+                        <motion.div initial={{ opacity: 0, scale: 1.2 }} onClick={() => window.location.href = data.link}
                             animate={{ opacity: selectedIndex === index ? 1 : 0.7, scale: selectedIndex === index ? 1 : 0.9, }}
                             whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }} onHoverStart={()=>setDescVisible(index)} onHoverEnd={() => setDescVisible(null)} 
-                             className="cursor-pointer w-full bg-cover bg-center rounded-xl h-[28rem] overflow-hidden shadow-xl" style={{backgroundImage: `url(${data.image})`}}>
+                             className="cursor-pointer w-full bg-cover bg-center rounded-xl h-[35rem] overflow-hidden shadow-xl" style={{backgroundImage: `url(${data.image})`}}>
                                 
-                                <h2 className="p-5 m-auto text-2xl font-bold text-white font-castoroRegular bg-slate-700/60 text-shadow-lg">{data.title}</h2>
+                                {/* <h2 className="p-5 m-auto text-2xl font-bold text-white font-castoroRegular bg-slate-700/60 text-shadow-lg">{data.title}</h2> */}
                                 <AnimatePresence >
                                     {descVisible === index && <motion.h2 transition={{ duration: 0.2 }} initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: 100}} className="absolute inset-x-0 bottom-0 p-5 m-auto font-gruppoRegular text-1.5xl text-white bg-slate-700/50" >{data.desc}</motion.h2>}
                                 </AnimatePresence>
@@ -79,9 +79,8 @@ export default function HomeCard(){
                 ))}
             </div>
                 
-            <div className="flex justify-between">    
-                {/* Top Navigation */}
-                <div className="flex items-center w-full px-2 mb-6 text-white">
+            <div className="flex justify-between">
+                {/* <div className="flex items-center w-full px-2 mb-6 text-white">
 
                     <button onClick={scrollPrev}><FontAwesomeIcon className="text-2xl" icon={faLeftLong} /></button>
 
@@ -91,14 +90,14 @@ export default function HomeCard(){
 
                     <button onClick={scrollNext}><FontAwesomeIcon className="text-2xl" icon={faRightLong} /></button>
 
-                </div>
+                </div> */}
 
-                <div className="flex gap-4 px-5 mx-2 text-white">
+                <div className="flex gap-4 px-5 m-auto text-white">
                     {homeCardsData.map((_, index) => (
                         <button
                         key={index}
                         onClick={() => scrollTo(index)}
-                        className={`w-2 h-2 rounded-full text-xl transition-all duration-300`} >{selectedIndex === index ? (<FontAwesomeIcon icon={faCircleSolid}/>)  : (<FontAwesomeIcon icon={faCircleRegular}/>)}</button>
+                        className={`w-2 h-2 rounded-full text-sm text-purple-700 transition-all duration-300`} >{selectedIndex === index ? (<FontAwesomeIcon icon={faCircleSolid}/>)  : (<FontAwesomeIcon icon={faCircleRegular}/>)}</button>
                     ))}
                 </div>
             </div>
