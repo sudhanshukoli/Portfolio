@@ -59,7 +59,7 @@ export default function HomeCard(){
     return(<>
     <div className="overflow-hidden shadow-xl ">
 
-        <div className="overflow-hidden w-[40rem] h-[45rem]" ref={emblaRef}>
+        <div className="overflow-hidden w-[32rem] h-[45rem]" ref={emblaRef}>
 
             <div className="flex">           
                 {homeCardsData.map((data, index)=>(

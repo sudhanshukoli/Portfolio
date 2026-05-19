@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
-import Contact from './component/Contact';
+import Contact from './component/Contact/Contact';
 import Home from './component/Home';
 import Interests from './component/Interests';
 import Learn from './component/Learn';
