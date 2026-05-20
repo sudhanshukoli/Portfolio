@@ -1,14 +1,24 @@
-import { faAt, faCalendar, faCircle as faCircleSolid, faLocation, faMobile } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faAt, faCalendar, faCircle as faCircleSolid, faLocation, faMobile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mapImg from "../../data/images/MapPng.png";
 
 export default function ContactInfo(){
 
+    const openWhatsApp = () => {
+
+        const text = "Hi, I visited your portfolio website and would like to connect.";
+
+    const whatsappUrl =
+    `https://wa.me/918668327650?text=${encodeURIComponent(text)}`;
+
+    window.open(whatsappUrl, "_blank");
+    };
+
     const sectionCss = "w-[35rem] h-full text-white border flex flex-col gap-2 border-opacity-50 font-railway bg-purple-950 bg-opacity-20 border-purple-950 rounded-2xl"
     
     return(<>
         <div className="flex flex-col">
-            <section className={`${sectionCss} h-[30rem] p-10 py-14`}>
+            <section className={`${sectionCss} h-[25rem] p-10 py-14`}>
                 <div className="text-left">
                     <h1 className="mb-4"><FontAwesomeIcon icon={faCircleSolid} className="w-3 h-3 mr-2 text-2xl text-purple-500"/>Contact information</h1>
                 </div>
@@ -49,8 +59,11 @@ export default function ContactInfo(){
             <section className={`${sectionCss} p-0 mt-8`}>
                 <div className="relative w-full h-full p-4 text-left bg-center bg-cover rounded-2xl" style={{backgroundImage: `url(${mapImg})` }}>
                     <div className="absolute bottom-0 left-0 w-full px-8 py-4 bg-black bg-opacity-70">
+                        <button onClick={openWhatsApp} className="float-right py-3 font-semibold text-white w-[15rem] bg-transparent border border-purple-700 from-purple-950 to-purple-500 hover:bg-gradient-to-tr font-railway rounded-xl">Let's connect <FontAwesomeIcon className="pl-4 text-2xl" icon={faArrowRight} /></button>
+                        
                         <h1>No matter where you are, <br /> we can build something great together.</h1>
                         <h1 className="font-bold text-purple-400">Lets Connect and create impact!</h1>
+                        
                     </div>
                 </div>
             </section>

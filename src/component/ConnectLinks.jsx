@@ -14,10 +14,10 @@ export default function ConnectLinks(){
                 <motion.a href="https://www.linkedin.com/in/sudhanshu-koli-sk2001" whileHover={{ scale: 1.1 }} target="_blank" rel="noreferrer">
                     <img src={linkedInImg} alt="LinkedIn" />
                 </motion.a>
-                <motion.a href="www.linkedin.com/in/sudhanshu-koli-sk2001" whileHover={{ scale: 1.1 }} target="_blank">
+                <motion.a href="https://instagram.com/gouri.shirgure" whileHover={{ scale: 1.1 }} target="_blank">
                     <img src={instaImg} alt="Instagram" />
                 </motion.a>
-                <motion.a href="www.linkedin.com/in/sudhanshu-koli-sk2001" whileHover={{ scale: 1.1 }} target="_blank">
+                <motion.a href="https://mail.google.com/mail/?view=cm&fs=1&to=kolisudhanshu@gmail.com" whileHover={{ scale: 1.1 }} target="_blank">
                     <img src={mailImg} alt="Mail" />
                 </motion.a>
                 <motion.a href="https://github.com/sudhanshukoli" whileHover={{ scale: 1.1 }} className="w-[1400px]" target="_blank" rel="noreferrer">

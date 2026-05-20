@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
+import About from './component/About/About';
 import Contact from './component/Contact/Contact';
 import Home from './component/Home';
-import Interests from './component/Interests';
 import Learn from './component/Learn';
 import PortfolioHeader from './component/PortfolioHeader';
 import "./fonts.css";
@@ -16,7 +16,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/interests' element={<Interests />} />
+        <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/learn' element={<Learn />} />
       </Routes>

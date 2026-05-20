@@ -31,7 +31,7 @@ export default function PortfolioHeader(){
             <nav className="flex text-2xl text-white font-railway ">
                 <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
                 <button className="px-6 mx-4" onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
-                <NavLink to="/interests" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>Interests</NavLink>
+                <NavLink to="/about" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>About</NavLink>
                 <NavLink to="/contact" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>Contact</NavLink>
             </nav>
         </motion.div>
