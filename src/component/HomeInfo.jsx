@@ -1,6 +1,5 @@
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ConnectLinks from "./ConnectLinks";
+import ResumeButton from "./buttons/ResumeButton";
 
 export default function HomeInfo(){
 
@@ -11,7 +10,8 @@ export default function HomeInfo(){
             <p className="mb-6 text-left text-gray-500">Full Stack Developer passionate about building fast, scalable,<br /> and modern web applications.
             Specialized in Spring Boot, React, and <br /> responsive UI design. Turning ideas into real-world digital solutions.</p>
 
-            <button onClick={() => window.open("/pdfs/sudhanshu.pdf")} className="self-end p-3 font-semibold text-white w-[15rem] bg-transparent border border-purple-700 from-purple-950 to-purple-500 hover:bg-gradient-to-tr font-railway rounded-xl">Download Resume <FontAwesomeIcon className="text-2xl" icon={faDownload} /></button>
+            {/* <button onClick={() => window.open("/pdfs/sudhanshu.pdf")} className="self-end p-3 font-semibold text-white w-[15rem] bg-transparent border border-purple-700 from-purple-950 to-purple-500 hover:bg-gradient-to-tr font-railway rounded-xl">Download Resume <FontAwesomeIcon className="text-2xl" icon={faDownload} /></button> */}
+            <ResumeButton />
 
             <ConnectLinks />
         </section>

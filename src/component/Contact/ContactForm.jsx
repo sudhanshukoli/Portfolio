@@ -30,7 +30,7 @@ export default function ContactForm({ setMailModal, setFormData, formData }){
     
 
     return(<>
-        <section className="px-10 text-white border border-opacity-50 font-railway py-14 bg-purple-950 bg-opacity-20 border-purple-950 rounded-2xl">
+        <section className="px-10 text-white border border-purple-700 font-railway py-14 bg-purple-950 bg-opacity-20 rounded-2xl">
             <div className="text-left">
                 <h1 className="mb-4"><FontAwesomeIcon icon={faCircleSolid} className="w-3 h-3 mr-2 text-2xl text-purple-500"/>Send a message</h1>
                 <p className="mb-6 text-left text-gray-50">Fill out the form below and i'll get back to you as soon as possible</p>
