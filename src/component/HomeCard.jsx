@@ -57,17 +57,17 @@ export default function HomeCard(){
     const scrollTo = (index) => emblaApi && emblaApi.scrollTo(index);
 
     return(<>
-    <div className="overflow-hidden shadow-xl ">
+    <div className="w-full overflow-hidden shadow-xl">
 
-        <div className="overflow-hidden w-[32rem] h-[45rem]" ref={emblaRef}>
+        <div className="overflow-hidden w-full max-w-[32rem] h-[32rem] sm:h-[38rem] md:h-[45rem] mx-auto" ref={emblaRef}>
 
             <div className="flex">           
                 {homeCardsData.map((data, index)=>(
-                    <div key={data.id} className="flex-[0_0_30rem] py-8 px-2 " >
+                    <div key={data.id} className="flex-[0_0_85%] sm:flex-[0_0_70%] md:flex-[0_0_30rem] px-2 py-6 sm:py-8 " >
                         <motion.div initial={{ opacity: 0, scale: 1.2 }} onClick={() => window.location.href = data.link}
                             animate={{ opacity: selectedIndex === index ? 1 : 0.7, scale: selectedIndex === index ? 1 : 0.9, }}
                             whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }} onHoverStart={()=>setDescVisible(index)} onHoverEnd={() => setDescVisible(null)} 
-                             className="cursor-pointer w-full bg-cover bg-center rounded-xl h-[35rem] overflow-hidden shadow-xl" style={{backgroundImage: `url(${data.image})`}}>
+                             className="relative cursor-pointer w-full h-[24rem] sm:h-[30rem] md:h-[35rem] bg-contain bg-no-repeat bg-center rounded-xl overflow-hidden bg-black" style={{backgroundImage: `url(${data.image})`}}>
                                 
                                 {/* <h2 className="p-5 m-auto text-2xl font-bold text-white font-castoroRegular bg-slate-700/60 text-shadow-lg">{data.title}</h2> */}
                                 <AnimatePresence >

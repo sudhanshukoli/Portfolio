@@ -1,46 +1,65 @@
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "motion/react";
+import { useState } from "react";
 import { NavLink } from "react-router";
 import cvPic from "../data/images/bwCvPng.png";
 
 export default function PortfolioHeader(){
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const onActiveNavCss = "bg-gradient-to-r from-violet-400 underline underline-offset-4 via-fuchsia-500 to-purple-700 bg-clip-text text-transparent";
-
-    const today = new Date();
-
-    const day = today.toLocaleString("en-US", {
-        weekday: "long",
-    });
-
-    const formattedDate = today.toLocaleDateString("en-IN");
 
     return(<>
     
-    <div className="flex h-[5rem] z-20 w-full flex-row justify-center pt-4 sticky top-0 ">
-        <motion.div initial={{x: -200, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{x: 0, opacity: 1}}
-                    className="flex flex-row  h-[5rem] content-center bg-black-500 border-r-0 pr-10 rounded-l-2xl border-purple-700 border bg-opacity-40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
-            <div initial={{opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{ opacity: 1}} className="h-[5rem] w-[5rem] self-start bg-center bg-cover " 
-                    style={{ backgroundImage: `url(${cvPic})`,
-                            WebkitMaskImage: "radial-gradient(ellipse 100% 100% at left, black 60%, transparent 100%)" }}>
-            </div>
-            <h1 className="content-center text-2xl text-white font-playwriteRegular ">Sudhanshu Koli</h1>
-        </motion.div>
+    <div className="sticky top-0 z-20 w-full px-3 pt-4">
 
         <motion.div initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}}
-                    className=" h-[5rem] content-center bg-black-500 px-10 border-r-0 border-l-0 border-purple-700 border bg-opacity-40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
-            <nav className="flex text-2xl text-white font-railway ">
-                <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
-                <button className="px-6 mx-4" onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
-                <NavLink to="/about" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>About</NavLink>
-                <NavLink to="/contact" className={({isActive})=>`cursor-pointer px-6 mx-4 ${isActive ? onActiveNavCss : ""} `}>Contact</NavLink>
-            </nav>
+                    className="relative border border-purple-700 rounded-2xl bg-black/40 shadow-[0_0_60px_rgba(147,51,234,0.35)] px-5 py-3">
+                            
+            <div className="flex items-center justify-between">         
+                <div className="flex items-center">        
+                    <div initial={{opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{ opacity: 1}} className="w-12 h-12 bg-center bg-cover sm:h-16 sm:w-16" 
+                            style={{ backgroundImage: `url(${cvPic})`,
+                                    WebkitMaskImage: "radial-gradient(ellipse 100% 100% at left, black 60%, transparent 100%)" }}>
+                    </div>
+                    <h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu {'</>'}</h1>
+                </div>
+                        
+                <nav className="flex-wrap justify-center hidden gap-2 text-sm text-white md:flex text-xlflex sm:gap-4 sm:text-lg md:text-xl">
+                    <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
+                    <button className="px-2 font-railway sm:px-4 " onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
+                    <NavLink to="/about" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>About</NavLink>
+                    <NavLink to="/contact" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Contact</NavLink>
+                </nav>
+
+                {/* Mobile Hamburger */}
+                <button className="text-2xl text-white md:hidden" onClick={() => setMenuOpen(!menuOpen)} >
+                    <FontAwesomeIcon  icon={menuOpen ? faXmark : faBars}  />
+                </button>
+            </div>
+            
+            {/* Mobile Dropdown */}
+            <motion.div initial={false}  animate={{ height: menuOpen ? "auto" : 0, opacity: menuOpen ? 1 : 0, }} className="overflow-hidden md:hidden" >
+
+                <nav className="flex flex-col gap-4 mt-5 text-lg text-center text-white font-railway" >
+
+                    <NavLink to="/">Home</NavLink>
+
+                    <button onClick={() => window.open("/pdfs/sudhanshu.pdf") } >Resume</button>
+
+                    <NavLink to="/about">About</NavLink>
+
+                    <NavLink to="/contact">Contact</NavLink>
+
+                </nav>
+
+            </motion.div>
+
         </motion.div>
 
-        <motion.div initial={{x: 200, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{x: 0, opacity: 1}}
-                    className="flex flex-row items-center gap-2 pr-4 font-playwriteRegular text-white  h-[5rem] content-center bg-black-500 px-10 border-l-0 rounded-r-2xl border-purple-700 border bg-opacity-40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
-            <h1>{day}</h1>
-            <p>{formattedDate}</p>
-        </motion.div>
+        
 
     </div>
 
