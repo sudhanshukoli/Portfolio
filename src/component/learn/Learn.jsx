@@ -12,10 +12,11 @@ export default function Learn(){
     const filteredData = learnData.filter((theData) => theData.title.toLocaleLowerCase().includes(pdfSearch.toLowerCase()));
     
     return(<>
-        <section className="flex flex-col items-center justify-center w-full h-full gap-10 pb-10 overflow-hidden shadow-xl px-28">
+        <section className="flex flex-col items-center justify-center w-full h-full gap-10 pb-10 overflow-hidden shadow-xl px-28 ">
             <LearnDesc />
             
-            <div className="flex flex-col w-full gap-8 p-8 border border-gray-400 bg-black/50">
+            <div className="flex flex-col w-full gap-8 p-8 border border-gray-400 bg-black/50">            
+                        
                 <div className="flex gap-5">
                     <FontAwesomeIcon className="absolute flex items-center p-2 text-2xl text-purple-600/60" icon={faMagnifyingGlass} />
                     <input type="search" value={pdfSearch} onChange={(e)=> setPdfSearch(e.target.value)} name="search"

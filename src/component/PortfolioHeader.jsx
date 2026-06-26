@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { NavLink } from "react-router";
-import cvPic from "../data/images/bwCvPng.png";
 
 export default function PortfolioHeader(){
 
@@ -20,10 +19,10 @@ export default function PortfolioHeader(){
                             
             <div className="flex items-center justify-between">         
                 <div className="flex items-center">        
-                    <div initial={{opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{ opacity: 1}} className="w-12 h-12 bg-center bg-cover sm:h-16 sm:w-16" 
+                    {/* <div initial={{opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{ opacity: 1}} className="w-12 h-12 bg-center bg-cover sm:h-16 sm:w-16" 
                             style={{ backgroundImage: `url(${cvPic})`,
                                     WebkitMaskImage: "radial-gradient(ellipse 100% 100% at left, black 60%, transparent 100%)" }}>
-                    </div>
+                    </div> */}
                     <h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu {'</>'}</h1>
                 </div>
                         
@@ -46,15 +45,15 @@ export default function PortfolioHeader(){
 
                 <nav className="flex flex-col gap-4 mt-5 text-lg text-center text-white font-railway" >
 
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/">Home</NavLink>
 
-                    <NavLink to="/learn">Learn</NavLink>
+                    <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/learn">Learn</NavLink>
                     
                     <button onClick={() => window.open("/pdfs/sudhanshu.pdf") } >Resume</button>
 
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/about">About</NavLink>
 
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/contact">Contact</NavLink>
 
                 </nav>
 

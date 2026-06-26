@@ -8,14 +8,13 @@ export default function LearnDataCard({ learnData }){
     console.log("data here " + learnData);
 
     const openPdf = (filePath)=>{
-        // window.open("/pdfs/sudhanshu.pdf");
         window.open(filePath);
     }
 
     const downloadPdf = (pdfFile)=>{
         const link = document.createElement("a");
-        link.href = "/pdfs/sudhanshu.pdf";
-        link.download = "pdf.title.pdf";
+        link.href = pdfFile.fil;
+        link.download = pdfFile.desc + ".pdf";
         link.click();
     }
 
