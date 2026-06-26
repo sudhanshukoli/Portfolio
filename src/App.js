@@ -3,7 +3,7 @@ import './App.css';
 import About from './component/About/About';
 import Contact from './component/Contact/Contact';
 import Home from './component/Home';
-import Learn from './component/Learn';
+import Learn from './component/learn/Learn.jsx';
 import PortfolioHeader from './component/PortfolioHeader';
 import "./fonts.css";
 

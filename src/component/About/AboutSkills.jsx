@@ -8,7 +8,7 @@ import languagesPng from "../../data/images/languagesPng.png";
 
 export default function AboutSkills(){
 
-    const sectionCss = "w-[35rem] h-full text-white border flex flex-col gap-2 font-railway bg-purple-950 bg-opacity-20 border-purple-700 rounded-2xl"
+    const sectionCss = "w-full h-full text-white border flex flex-col gap-2 font-railway bg-purple-950 bg-opacity-20 border-purple-700 rounded-2xl"
 
     return(<>
         <section className={`${sectionCss} h-[25rem] p-10 py-14`}>

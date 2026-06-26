@@ -17,9 +17,9 @@ export default function Contact(){
     const [mailModal, setMailModal] = useState(false);
 
     return(<>
-        <section className="flex flex-col items-center justify-center w-screen h-full gap-10 pb-20 overflow-hidden shadow-xl">
+        <section className="flex flex-col items-center justify-center w-full h-full gap-10 py-20 overflow-hidden shadow-xl">
             <ContactDesc />
-            <div className="flex justify-center w-screen h-full gap-8 ">
+            <div className="flex justify-center w-full h-full gap-10 ">
                 <ContactForm setMailModal={setMailModal} formData={formData} setFormData={setFormData} />
                 <ContactInfo />
                 {mailModal && (<GmailModal setMailModal={setMailModal} formData={formData} setFormData={setFormData} />) }

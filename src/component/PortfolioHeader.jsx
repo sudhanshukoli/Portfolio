@@ -29,6 +29,7 @@ export default function PortfolioHeader(){
                         
                 <nav className="flex-wrap justify-center hidden gap-2 text-sm text-white md:flex text-xlflex sm:gap-4 sm:text-lg md:text-xl">
                     <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
+                    <NavLink to="/learn" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Learn</NavLink>
                     <button className="px-2 font-railway sm:px-4 " onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
                     <NavLink to="/about" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>About</NavLink>
                     <NavLink to="/contact" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Contact</NavLink>
@@ -47,6 +48,8 @@ export default function PortfolioHeader(){
 
                     <NavLink to="/">Home</NavLink>
 
+                    <NavLink to="/learn">Learn</NavLink>
+                    
                     <button onClick={() => window.open("/pdfs/sudhanshu.pdf") } >Resume</button>
 
                     <NavLink to="/about">About</NavLink>

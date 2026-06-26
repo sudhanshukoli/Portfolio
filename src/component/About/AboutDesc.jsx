@@ -9,8 +9,8 @@ export default function AboutDesc(){
 
     return(<>
 
-        <section className="flex items-center justify-center gap-56">
-            <div className="w-96">
+        <section className="flex items-center justify-center gap-52">
+            <div className="w-full">
                 <h1 className="mb-4 text-4xl font-bold text-left text-white font-railway">About <b className="text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Me</b><p className="text-xl font-semibold text-white">{`${aboutData.subtitle} <>`}</p></h1>
                 
                 <p className="mb-6 text-left text-gray-500">{aboutData.description}</p>
