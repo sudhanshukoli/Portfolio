@@ -23,7 +23,7 @@ export default function PortfolioHeader(){
                             style={{ backgroundImage: `url(${cvPic})`,
                                     WebkitMaskImage: "radial-gradient(ellipse 100% 100% at left, black 60%, transparent 100%)" }}>
                     </div> */}
-                    <h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu {'</>'}</h1>
+                    <h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu Koli {'</>'}</h1>
                 </div>
                         
                 <nav className="flex-wrap justify-center hidden gap-2 text-sm text-white md:flex text-xlflex sm:gap-4 sm:text-lg md:text-xl">
