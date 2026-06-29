@@ -4,6 +4,7 @@ import About from './component/About/About';
 import Contact from './component/Contact/Contact';
 import Home from './component/Home';
 import Learn from './component/learn/Learn.jsx';
+import Motivation from './component/Motivation/Motivation.jsx';
 import PortfolioHeader from './component/PortfolioHeader';
 import "./fonts.css";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/learn' element={<Learn />} />
+        <Route path='/motivation' element={<Motivation />} />
       </Routes>
     </div>
   );

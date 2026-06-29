@@ -23,7 +23,8 @@ const homeCardsData = [
     id: 3,
     title: "Motivation",
     desc: "Click here to get motivated",
-    image: motivationPng
+    image: motivationPng,
+    link: "/motivation"
   },
   {
     id: 4,
