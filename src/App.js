@@ -6,6 +6,7 @@ import Home from './component/Home';
 import Learn from './component/learn/Learn.jsx';
 import Motivation from './component/Motivation/Motivation.jsx';
 import PortfolioHeader from './component/PortfolioHeader';
+import Projects from './component/Projects/Projects.jsx';
 import "./fonts.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/learn' element={<Learn />} />
         <Route path='/motivation' element={<Motivation />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
     </div>
   );

@@ -17,7 +17,7 @@ const homeCardsData = [
     title: "Projects",
     desc: "Click here to check my projects",
     image: projectsPng,
-    link: ""
+    link: "/projects"
   },
   {
     id: 3,
