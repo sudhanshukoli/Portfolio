@@ -1,4 +1,15 @@
 import { faClock, faFileCode, faHeart, faStar } from "@fortawesome/free-regular-svg-icons";
+import bgMotivation from "../data/images/bgMotivation.png";
+
+
+export const MotivationHeaderData = {
+
+        headerLine: "What Drives Me",
+        highlightHeader: "Every Day",
+        subHeader: "I build not just to code, but to create impact, solve problems and keep growing",
+        desc: "Motivation is the fuel behind my consistency. It keeps. me curious, focused and committed to becoming the best version of myself - every single day",
+        headerImg: bgMotivation
+    }
 
 
 export const DailyMotivationData = [

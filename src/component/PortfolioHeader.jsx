@@ -1,10 +1,11 @@
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { NavLink } from "react-router";
-
 export default function PortfolioHeader(){
+    const btnCss = "sm:py-2 sm:p-6 text-xl mx-20 text-white border border-purple-700 font-railway rounded-xl"
+
 
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,12 +27,15 @@ export default function PortfolioHeader(){
                     <h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu Koli {'</>'}</h1>
                 </div>
                         
-                <nav className="flex-wrap justify-center hidden gap-2 text-sm text-white md:flex text-xlflex sm:gap-4 sm:text-lg md:text-xl">
+                <nav className="flex-wrap items-center justify-center hidden gap-2 text-sm text-white md:flex text-xlflex sm:gap-4 sm:text-lg md:text-xl">
                     <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
+                    <NavLink to="/projects" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Projects</NavLink>
                     <NavLink to="/learn" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Learn</NavLink>
-                    <button className="px-2 font-railway sm:px-4 " onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume</button>
                     <NavLink to="/about" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>About</NavLink>
                     <NavLink to="/contact" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Contact</NavLink>
+                    
+                    <button className={`${btnCss} from-purple-950 to-purple-500 bg-gradient-to-tr hover:from-transparent hover:to-transparent `}
+                        onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume<FontAwesomeIcon className="pl-2" icon={faArrowUpRightFromSquare} /></button>
                 </nav>
 
                 {/* Mobile Hamburger */}
@@ -47,14 +51,17 @@ export default function PortfolioHeader(){
 
                     <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/">Home</NavLink>
 
+                    <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/projects">Projects</NavLink>
+
                     <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/learn">Learn</NavLink>
-                    
-                    <button onClick={() => window.open("/pdfs/sudhanshu.pdf") } >Resume</button>
 
                     <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/about">About</NavLink>
 
                     <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/contact">Contact</NavLink>
 
+                    <button className={`${btnCss} from-purple-950 to-purple-500 bg-gradient-to-tr hover:from-transparent hover:to-transparent `}
+                        onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume<FontAwesomeIcon className="pl-2" icon={faArrowUpRightFromSquare} /></button>
+                    
                 </nav>
 
             </motion.div>
