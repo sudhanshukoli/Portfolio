@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { NavLink } from "react-router";
 export default function PortfolioHeader(){
-    const btnCss = "sm:py-2 sm:p-6 text-xl mx-20 text-white border border-purple-700 font-railway rounded-xl"
+    const btnCss = "sm:py-2 sm:p-6 text-xl text-white border border-purple-700 font-railway rounded-xl"
 
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -59,7 +59,7 @@ export default function PortfolioHeader(){
 
                     <NavLink className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `} to="/contact">Contact</NavLink>
 
-                    <button className={`${btnCss} from-purple-950 to-purple-500 bg-gradient-to-tr hover:from-transparent hover:to-transparent `}
+                    <button className={`${btnCss} mx-20 from-purple-950 to-purple-500 bg-gradient-to-tr hover:from-transparent hover:to-transparent `}
                         onClick={()=> window.open("/pdfs/sudhanshu.pdf")} >Resume<FontAwesomeIcon className="pl-2" icon={faArrowUpRightFromSquare} /></button>
                     
                 </nav>
