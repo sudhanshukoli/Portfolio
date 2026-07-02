@@ -37,6 +37,12 @@ const learnData = [
         desc: "Learn about spring security",
         file: "/pdfs/SpringBootSecurity.pdf"
 
+    },
+    {
+        title: "System Design",
+        desc: "Learn System Design",
+        file: "/pdfs/SystemDesign.pdf"
+
     }
 ];
 
