@@ -43,6 +43,12 @@ const learnData = [
         desc: "Learn System Design",
         file: "/pdfs/SystemDesign.pdf"
 
+    },
+    {
+        title: "SQL BASIC TO ADVANCE",
+        desc: "Learn SQL Basic to Advance",
+        file: "/pdfs/SQLBasicToAdvance.pdf"
+
     }
 ];
 
