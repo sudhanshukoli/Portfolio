@@ -28,7 +28,7 @@ export const ProjectCardData = [
     {
         image: bgPersonalPortfolioProject,
         icon: faUserTie,
-        title: "Personal Portfolio",
+        title: "Portfolio",
         desc: "A React-based portfolio website built to present my projects, technical skills, resume, and professional experience in one place.",
         sourceLink: "https://github.com/sudhanshukoli/Portfolio",
         demoLink: "https://sudhanshukoli-portfolio.vercel.app"

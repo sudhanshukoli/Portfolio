@@ -14,7 +14,7 @@ export default function LetsConnectButton(){
     };
 
     return(<>
-        <button onClick={openWhatsApp} className="float-right py-3 font-semibold text-white w-[15rem] bg-transparent border border-purple-700 from-purple-950 to-purple-500 hover:bg-gradient-to-tr font-railway rounded-xl">Let's connect <FontAwesomeIcon className="pl-4 text-2xl" icon={faArrowRight} /></button>
+        <button onClick={openWhatsApp} className="float-right py-3 font-semibold text-white w-full md:w-[15rem] bg-transparent border border-purple-700 from-purple-950 to-purple-500 hover:bg-gradient-to-tr font-railway rounded-xl">Let's connect <FontAwesomeIcon className="md:pl-4 md:text-2xl" icon={faArrowRight} /></button>
     </>)
 
 }
