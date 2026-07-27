@@ -1,3 +1,14 @@
+import learnPdfImg from "../data/images/learnPdfImg.png";
+
+export const LearnHeaderData = {
+
+        headerLine: "Learn. Build. ",
+        highlightHeader: "Share.",
+        subHeader: " ",
+        desc: "A collection of my personal notes, interview preparation material, and engineering learnings gathered thoughout my software development journey at Amazon and beyond",
+        headerImg: learnPdfImg
+    }
+
 const learnData = [
     {
         title: "Database",
@@ -29,7 +40,7 @@ const learnData = [
     },
     {
         title: "Collections and Streams",
-        desc: "Learn collection and streams in java",
+        desc: "Learn collection and streams",
         file: "/pdfs/CollectionsStreams.pdf"
     },
     {
