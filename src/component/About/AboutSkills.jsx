@@ -11,7 +11,7 @@ export default function AboutSkills(){
     const sectionCss = "w-full h-full text-white border flex flex-col gap-2 font-railway bg-purple-950 bg-opacity-20 border-purple-700 rounded-2xl"
 
     return(<>
-        <section className={`${sectionCss} h-[25rem] p-10 py-14`}>
+        <section className={`${sectionCss} p-5 md:p-10 md:py-14`}>
             <div className="text-left">
                 <h1 className="mb-4"><FontAwesomeIcon icon={faCircleSolid} className="w-3 h-3 mr-2 text-2xl text-purple-500"/>What I do</h1>
                 <p className="mb-6 text-left text-gray-50">{aboutData.quote}</p>
