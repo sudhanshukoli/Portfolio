@@ -19,7 +19,7 @@ export default function AboutJourney(){
 
                 <div>
                     <div className="flex items-start justify-start">
-                        <FontAwesomeIcon className="p-1 mr-2 text-2xl text-purple-300 border-2 border-purple-300 rounded-full md:p-0 md:py-1 md:text-4xl bg-opacity-20 bg-purple-950 " icon={faAmazon} /> <h1 className="self-center font-bold text-left">Amazon - 2023<p className="font-normal text-gray-500">Automation Specialist (Java developer)</p></h1>  
+                        <FontAwesomeIcon className="p-1 mr-2 text-2xl text-purple-300 border-2 border-purple-300 rounded-full md:p-0 md:py-1 md:text-4xl bg-opacity-20 bg-purple-950 " icon={faAmazon} /> <h1 className="self-center font-bold text-left">Amazon - 2023<p className="text-xs font-normal text-gray-500 md:text-sm">Automation Specialist (Java developer)</p></h1>  
                     </div>
                 </div>
             </section>
