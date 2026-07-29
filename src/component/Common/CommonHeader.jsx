@@ -8,7 +8,7 @@ export default function CommonHeader({headerData}){
                     <b className="text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">{headerData.highlightHeader}</b>
                 </h1>
                 <h1 className="pl-2 md:mb-6 text-sm md:text-xl text-left text-white border-l-4 border-purple-500 md:w-[28rem] font-railway">{headerData.subHeader}</h1>
-                <p className="my-6 text-left text-gray-200">{headerData.desc}</p>
+                <p className="my-2 text-xs text-left text-gray-400 md:my-6 md:text-sm">{headerData.desc}</p>
             </div>
             <motion.img initial={{ opacity: 0, scale: 1.2 }} animate={{opacity: 1, scale:1}} className="w-[20rem] hidden md:block" src={headerData.headerImg} alt="Motivation" />
         </section>

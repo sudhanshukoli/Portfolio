@@ -3,7 +3,7 @@ import LetsConnectButton from "../buttons/LetsConnectButton";
 
 export default function LetsConnectCard(){
 
-    const sectionCss = ` h-full text-white border flex flex-col gap-2 font-railway bg-purple-950 bg-opacity-20 border-purple-700 rounded-2xl`
+    const sectionCss = `hidden md:block h-full text-white border flex flex-col gap-2 font-railway bg-purple-950 bg-opacity-20 border-purple-700 rounded-2xl`
 
     return(<>
         <section className={`${sectionCss} p-0 mt-8`}>
