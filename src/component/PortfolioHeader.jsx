@@ -13,10 +13,14 @@ export default function PortfolioHeader(){
 
     return(<>
     
-    <div className="sticky top-0 z-20 w-full px-3 pt-4">
+    <motion.div initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}} className="px-5 mx-2 py-2 flex items-center justify-center border border-purple-700 rounded-2xl bg-black/40 shadow-[0_0_60px_rgba(147,51,234,0.35)]">
+       <p className="text-white">UPDATE - <a href="https://sudhanshu-vibe-portfolio.vercel.app/" target="_blank" className="text-blue-300 font-railway" rel="noreferrer"> Click here to checkout new vibe coded portfolio</a></p>
+    </motion.div>
 
+    <div className="sticky top-0 z-20 w-full px-3 pt-4 md:pt-2">
+        
         <motion.div initial={{y: -100, opacity: 0}} transition={{duration: 1, ease: "easeInOut"}} animate={{y: 0, opacity: 1}}
-                    className="relative border border-purple-700 rounded-2xl bg-black/40 shadow-[0_0_60px_rgba(147,51,234,0.35)] px-5 py-3">
+                    className="relative border border-purple-700 rounded-2xl bg-black/40 backdrop-blur-sm shadow-[0_0_60px_rgba(147,51,234,0.35)] px-5 py-3">
                             
             <div className="flex items-center justify-between">         
                 <div className="flex items-center">        
@@ -24,11 +28,11 @@ export default function PortfolioHeader(){
                             style={{ backgroundImage: `url(${cvPic})`,
                                     WebkitMaskImage: "radial-gradient(ellipse 100% 100% at left, black 60%, transparent 100%)" }}>
                     </div> */}
-                    <h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu Koli {'</>'}</h1>
+                    <NavLink to="/"><h1 className="text-xl font-semibold text-transparent sm:text-2xl md:text-3xl font-railway bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-700 bg-clip-text">Sudhanshu Koli {'</>'}</h1></NavLink>
                 </div>
                         
                 <nav className="flex-wrap items-center justify-center hidden gap-2 text-sm text-white md:flex text-xlflex sm:gap-4 sm:text-lg md:text-xl">
-                    <NavLink whileHover={{scale: 1.1}} to="/" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
+                    <NavLink to="/" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Home</NavLink>
                     <NavLink to="/projects" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Projects</NavLink>
                     <NavLink to="/learn" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>Learn</NavLink>
                     <NavLink to="/about" className={({isActive})=>`font-railway px-2 sm:px-4  ${isActive ? onActiveNavCss : ""} `}>About</NavLink>
@@ -45,7 +49,7 @@ export default function PortfolioHeader(){
             </div>
             
             {/* Mobile Dropdown */}
-            <motion.div initial={false}  animate={{ height: menuOpen ? "auto" : 0, opacity: menuOpen ? 1 : 0, }} className="overflow-hidden md:hidden" >
+            <motion.div initial={false}  animate={{ height: menuOpen ? "auto" : 0, opacity: menuOpen ? 1 : 0, }} onClick={() => setMenuOpen(!menuOpen)} className="overflow-hidden md:hidden" >
 
                 <nav className="flex flex-col gap-4 mt-5 text-lg text-center text-white font-railway" >
 
